@@ -24,5 +24,8 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# 图组联系表（本地检查用，由 scripts 重生成）
+figures/_contact_*.png
+
 # DSH 本地文件
 .dsh*

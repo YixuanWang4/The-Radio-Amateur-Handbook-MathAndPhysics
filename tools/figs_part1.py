@@ -835,10 +835,10 @@ def fig_7_1():
 # ---------------------------------------------------------------- 7-2 Zin 随电长度
 def fig_7_2():
     img, d = canvas()
-    title(d, "输入阻抗随电长度旋转（ZL = 2Z0）")
+    title(d, "输入阻抗随电长度的变化（Z_L = 2Z_0）")
     x0, y0, x1, y1 = 260, 790, 1250, 250
     axis(d, x0, y0, x1, y1)
-    axes_labels(d, "电长度 βl", "|Zin| / Z0", x0, y0, x1, y1)
+    axes_labels(d, "电长度 βl", "|Z_in| / Z_0", x0, y0, x1, y1)
     X = lambda b: x0 + b / math.pi * (x1 - x0 - 20)
     Y = lambda v: y0 - v / 3.2 * (y0 - y1 - 20)
     ticks = [(0, "0"), (math.pi / 4, "λ/8"), (math.pi / 2, "λ/4"),
@@ -862,11 +862,11 @@ def fig_7_2():
     dot(d, X(math.pi / 2), Y(0.5), 8, RED)
     dot(d, X(math.pi), Y(2.0), 8, RED)
     dashed_line(d, (X(math.pi / 2), y0), (X(math.pi / 2), Y(0.5)), RED, 2)
-    text(d, (X(math.pi / 2) - 16, Y(0.5) + 44), "λ/4：Zin = Z0^2/ZL", 22, RED, "lm")
+    text(d, (X(math.pi / 2) - 18, Y(0.5) + 42), "λ/4：Z_in = Z_0^(2)/Z_L", 22, RED, "rm")
     dashed_line(d, (X(math.pi), y0), (X(math.pi), Y(2.0)), RED, 2)
-    text(d, (X(math.pi) - 16, Y(2.0) + 40), "λ/2：Zin = ZL", 22, RED, "lm")
-    text(d, (900, 360), "Zin = Z0 (ZL + jZ0 tanβl) / (Z0 + jZL tanβl)", 23, ACCENT)
-    text(d, (800, 890), "λ/4 把阻抗倒过来；λ/2 原样搬回去；其余长度在两者之间", 24, MID)
+    text(d, (X(math.pi) - 18, Y(2.0) + 44), "λ/2：Z_in = Z_L", 22, RED, "rm")
+    text(d, (900, 360), "Z_in = Z_0·(Z_L + jZ_0·tanβl)/(Z_0 + jZ_L·tanβl)", 23, ACCENT)
+    text(d, (800, 890), "λ/4 将阻抗反变换；λ/2 原样送回；其余长度介于两者之间", 24, MID)
     save(img, "fig-7-2.png")
 
 

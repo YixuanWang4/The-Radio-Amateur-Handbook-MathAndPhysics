@@ -892,8 +892,7 @@ def add_figure(doc, caption, image_path):
     if m:
         lead = cap.add_run(m.group(1))
         run_fonts(lead, BODY_CN, BODY_EN, 9, True, ACCENT_RGB)
-        rest = cap.add_run(" " + m.group(2) if m.group(2) else "")
-        run_fonts(rest, BODY_CN, BODY_EN, 9, color=MID_GRAY)
+        add_rich_text(cap, (" " + m.group(2)) if m.group(2) else "", size=9, color=MID_GRAY)
     else:
         run = cap.add_run(caption)
         run_fonts(run, BODY_CN, BODY_EN, 9, color=MID_GRAY)

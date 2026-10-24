@@ -304,7 +304,7 @@ def fig_10_1():
     q = (s2[0] + proj * u[0], s2[1] + proj * u[1])
     dashed(d, s1, q, RED, 3, 12, 8)
     dot(d, q[0], q[1], 6, RED)
-    text(d, (452, 470), "Δr = d·cosθ", 27, RED, "lm")
+    text(d, (470, 505), "Δr = d·cosθ", 27, RED, "lm")
     text(d, (760, 180), "远场方向\n（两条射线近似平行）", 24, MID)
     # 右：极坐标阵因子
     cx, cy, R = 1170, 540, 225
@@ -329,7 +329,7 @@ def fig_10_1():
         arc.append((cx + 120 * math.sin(a), cy - 120 * math.cos(a)))
     line(d, arc, RED, 2)
     text(d, (cx + 150, cy + 40), "60°", 26, RED, "lm")
-    text(d, (cx + R + 22, cy), "边射\n+3 dB", 24, ACCENT, "lm")
+    text(d, (cx + R + 22, cy), "边射\n0 dB", 24, ACCENT, "lm")
     text(d, (cx, cy - R - 32), "端射零点", 24, RED)
     text(d, (cx, cy + R + 34), "端射零点", 24, RED)
     text(d, (cx, 880), "阵因子：d=λ/2、同相馈电", 24, MID)
