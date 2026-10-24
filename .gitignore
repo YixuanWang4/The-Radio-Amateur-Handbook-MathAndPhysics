@@ -1,0 +1,28 @@
+# 构建产物
+build/
+release/
+dist/
+
+# 过程文档与备份
+work/
+samples/
+00-*.md
+.dsh*/
+.qa-*
+
+# 本地环境与缓存
+__pycache__/
+*.pyc
+.venv/
+.idea/
+.vscode/
+
+# 二进制与临时文件
+*.docx
+*.pdf
+~$*
+.DS_Store
+Thumbs.db
+
+# DSH 本地文件
+.dsh*

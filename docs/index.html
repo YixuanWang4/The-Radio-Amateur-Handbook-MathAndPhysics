@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>业余无线电实用数学物理</title>
+  <style>
+    :root { --ink:#1f3a5f; --muted:#5b6b80; --line:#d8dee8; --bg:#f7f9fc; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:#1b2430;
+           font:16px/1.75 -apple-system,"Segoe UI","Noto Sans SC","Microsoft YaHei",sans-serif; }
+    main { max-width:760px; margin:0 auto; padding:64px 24px 80px; }
+    h1 { color:var(--ink); font-size:2rem; letter-spacing:.02em; margin:0 0 8px; }
+    .sub { color:var(--muted); font-size:1.05rem; margin:0 0 32px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:10px;
+            padding:24px 26px; margin:20px 0; }
+    .btn { display:inline-block; background:var(--ink); color:#fff; text-decoration:none;
+           padding:11px 20px; border-radius:6px; font-weight:600; }
+    .btn.secondary { background:#fff; color:var(--ink); border:1px solid var(--ink); }
+    .meta { color:var(--muted); font-size:.92rem; }
+    ul { padding-left:1.2em; }
+    a { color:var(--ink); }
+    footer { color:var(--muted); font-size:.86rem; margin-top:40px; border-top:1px solid var(--line); padding-top:16px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>业余无线电实用数学物理</h1>
+  <p class="sub">电台里的数学与物理：写给想弄明白天线、馈线、传播与设备原理的短波爱好者。</p>
+
+  <div class="card">
+    <p>修订稿 v0.6.0 · A5 273 页 · 正文约 7.76 万汉字 · 51 幅插图 · 93 道习题</p>
+    <p>
+      <a class="btn" id="download" href="#">下载最新版（PDF / Word）</a>
+      <a class="btn secondary" id="repo" href="#">在 GitHub 上查看</a>
+    </p>
+    <p class="meta">成品只通过 GitHub Releases 发布；本页不存放 PDF 副本，避免与 Release 不同步。</p>
+  </div>
+
+  <div class="card">
+    <h3>这本书讲什么</h3>
+    <ul>
+      <li>用高中代数、三角、对数和一点复数，解释 dB、驻波、馈线损耗、天线增益与有效面积；</li>
+      <li>把链路预算、噪声底、灵敏度、传播损耗串成同一条估算链；</li>
+      <li>5 个 ★ 拓展章讲振荡、电磁场、阵列、SDR 采样与建模，可按兴趣选读。</li>
+    </ul>
+    <p class="meta">不写：电磁场完整推导、设备维修、商品评测与报价、法规逐条解释。</p>
+  </div>
+
+  <div class="card">
+    <h3>勘误与协作</h3>
+    <p>发现错误请到仓库的 Issues 使用“勘误”模板；改稿规则见仓库 <code>CONTRIBUTING.md</code>。</p>
+    <p><a id="issues" href="#">打开 Issue 列表</a></p>
+  </div>
+
+  <footer>
+    本书文字与插图采用 CC BY-NC-SA 4.0 许可，代码采用 MIT 许可。本书为爱好者编写，不代表任何学校、协会或厂商的官方立场。
+  </footer>
+</main>
+<script>
+  (function () {
+    var host = location.hostname;
+    var parts = location.pathname.split('/').filter(Boolean);
+    var owner = host.endsWith('.github.io') ? host.split('.')[0] : null;
+    var repo = owner ? (parts[0] || '') : '';
+    if (owner && repo) {
+      var base = 'https://github.com/' + owner + '/' + repo;
+      document.getElementById('download').href = base + '/releases/latest';
+      document.getElementById('repo').href = base;
+      document.getElementById('issues').href = base + '/issues';
+    } else {
+      document.getElementById('download').href = 'https://github.com/OWNER/REPO/releases/latest';
+      document.getElementById('repo').href = 'https://github.com/OWNER/REPO';
+      document.getElementById('issues').href = 'https://github.com/OWNER/REPO/issues';
+    }
+  })();
+</script>
+</body>
+</html>

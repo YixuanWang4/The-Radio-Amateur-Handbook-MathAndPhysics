@@ -1,0 +1,70 @@
+name: 勘误
+description: 报告书中的事实、计算、文字或排版错误
+title: "[勘误] "
+labels: ["errata"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢勘误。请尽量写清位置与依据，方便核对。提交前请确认没有重复的 Issue。
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: 如 v0.6.0，或 PDF 封面上的版本号
+      placeholder: v0.6.0
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: 章节 / 页码
+      description: 如“第 8 章 表 8-1”“PDF p102”
+      placeholder: 第 8 章，p102
+    validations:
+      required: true
+  - type: textarea
+    id: original
+    attributes:
+      label: 原文
+      description: 摘录有问题的原文（公式请贴出完整式子）
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 问题类型
+      options:
+        - 事实 / 计算错误
+        - 公式或符号
+        - 图表 / 排版
+        - 文字 / 标点 / 术语
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题说明
+      description: 为什么认为它是错的
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建议修改
+      description: 可直接替换的文字或公式
+      render: text
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 依据
+      description: 手册、标准、教材的章节/页码，或完整计算过程
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我已搜索过现有 Issue，确认不是重复报告
+          required: true
