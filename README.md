@@ -6,11 +6,12 @@
 
 本书用高中代数、三角、对数和一点复数，解释业余无线电里最常遇到的“为什么”：dB 到底怎么读、驻波表为什么不能判断效率、馈线损耗怎样进入链路预算、天线增益与有效面积从哪来、噪声底和灵敏度是什么关系、传播预测里的数字是怎样估出来的。
 
-- **状态**：修订稿 v0.7.1（2026-10）
+- **状态**：修订稿 v0.7.2（2026-10）
 - **规模**：281 页（A5）、正文约 7.9 万汉字、51 幅插图、45 张表、85 道分级习题（附答案）
-- **下载**：[最新 Release](https://github.com/OWNER/REPO/releases/latest)（把 `OWNER/REPO` 换成实际仓库地址；PDF 与 Word 只在 Releases 提供）
+- **下载**：[交大云盘](https://pan.sjtu.edu.cn/web/share/2f95bec34834507b7b94171a218d2681)（PDF 与 Word）
+- **仓库**：[YixuanWang4/The-Radio-Amateur-Handbook-MathAndPhysics](https://github.com/YixuanWang4/The-Radio-Amateur-Handbook-MathAndPhysics)
 
-v0.7 重写了全书叙述：每节按“问题—图景—定义—推导—解释—校验”组织，补上原先“从略”的中间步，并统一了公式与图注的上下标排版。v0.7.1 增加协会序言。
+v0.7 重写了全书叙述：每节按“问题—图景—定义—推导—解释—校验”组织，补上原先“从略”的中间步，并统一了公式与图注的上下标排版。v0.7.1 增加协会序言；v0.7.2 校正序言中关于成书经过的表述，并补上云盘与仓库链接。
 
 ## 适合谁
 
@@ -74,4 +75,4 @@ v0.7 重写了全书叙述：每节按“问题—图景—定义—推导—解
 
 ## 版本
 
-当前为 v0.7.1 修订稿；变更记录见 [`CHANGELOG.md`](CHANGELOG.md)，作者与贡献者见 [`AUTHORS.md`](AUTHORS.md)。
+当前为 v0.7.2 修订稿；变更记录见 [`CHANGELOG.md`](CHANGELOG.md)，作者与贡献者见 [`AUTHORS.md`](AUTHORS.md)。

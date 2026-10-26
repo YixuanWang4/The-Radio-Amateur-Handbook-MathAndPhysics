@@ -1,5 +1,11 @@
 # 更新记录
 
+## v0.7.2 — 2026-10-26
+
+- 校正序言中关于成书经过的表述：本书由协会爱好者新写，不是多年培训积累，也没有指导老师参与。
+- README 补上[交大云盘](https://pan.sjtu.edu.cn/web/share/2f95bec34834507b7b94171a218d2681)与 [GitHub 仓库](https://github.com/YixuanWang4/The-Radio-Amateur-Handbook-MathAndPhysics)链接。
+- 项目页 `docs/index.html` 同步更新下载与仓库链接。
+
 ## v0.7.1 — 2026-10-26
 
 - 增加协会序言（`00-序言.md`），说明本书的写作缘由、读者对象与阅读方式。

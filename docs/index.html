@@ -30,12 +30,12 @@
   <p class="sub">上海交通大学业余无线电协会 编著</p>
 
   <div class="card">
-    <p>修订稿 v0.7.1 · A5 281 页 · 正文约 7.9 万汉字 · 51 幅插图 · 85 道习题</p>
+    <p>修订稿 v0.7.2 · A5 281 页 · 正文约 7.9 万汉字 · 51 幅插图 · 85 道习题</p>
     <p>
-      <a class="btn" id="download" href="#">下载最新版（PDF / Word）</a>
-      <a class="btn secondary" id="repo" href="#">在 GitHub 上查看</a>
+      <a class="btn" href="https://pan.sjtu.edu.cn/web/share/2f95bec34834507b7b94171a218d2681">下载最新版（PDF / Word）</a>
+      <a class="btn secondary" href="https://github.com/YixuanWang4/The-Radio-Amateur-Handbook-MathAndPhysics">在 GitHub 上查看</a>
     </p>
-    <p class="meta">成品只通过 GitHub Releases 发布；本页不存放 PDF 副本，避免与 Release 不同步。</p>
+    <p class="meta">PDF 与 Word 见交大云盘；源码、勘误与版本记录在 GitHub 仓库。</p>
   </div>
 
   <div class="card">
@@ -51,30 +51,12 @@
   <div class="card">
     <h3>勘误与协作</h3>
     <p>发现错误请到仓库的 Issues 使用“勘误”模板；改稿规则见仓库 <code>CONTRIBUTING.md</code>。</p>
-    <p><a id="issues" href="#">打开 Issue 列表</a></p>
+    <p><a href="https://github.com/YixuanWang4/The-Radio-Amateur-Handbook-MathAndPhysics/issues">打开 Issue 列表</a></p>
   </div>
 
   <footer>
-    本书文字与插图采用 CC BY-NC-SA 4.0 许可，代码采用 MIT 许可。本书为爱好者编写，不代表任何学校、协会或厂商的官方立场。
+    本书文字与插图采用 CC BY-NC-SA 4.0 许可。本书为爱好者编写，不代表任何学校、协会或厂商的官方立场。
   </footer>
 </main>
-<script>
-  (function () {
-    var host = location.hostname;
-    var parts = location.pathname.split('/').filter(Boolean);
-    var owner = host.endsWith('.github.io') ? host.split('.')[0] : null;
-    var repo = owner ? (parts[0] || '') : '';
-    if (owner && repo) {
-      var base = 'https://github.com/' + owner + '/' + repo;
-      document.getElementById('download').href = base + '/releases/latest';
-      document.getElementById('repo').href = base;
-      document.getElementById('issues').href = base + '/issues';
-    } else {
-      document.getElementById('download').href = 'https://github.com/OWNER/REPO/releases/latest';
-      document.getElementById('repo').href = 'https://github.com/OWNER/REPO';
-      document.getElementById('issues').href = 'https://github.com/OWNER/REPO/issues';
-    }
-  })();
-</script>
 </body>
 </html>
