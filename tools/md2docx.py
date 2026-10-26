@@ -42,7 +42,7 @@ BOOK_SUBTITLE = "电台里的数学与物理"
 BOOK_DESCRIPTION = "写给想弄明白天线、馈线、传播与设备原理的短波爱好者"
 BOOK_EDITION = "本书编写组 · 2026 年 10 月"
 HEADER_TITLE = "业余无线电实用数学物理"
-HEADER_AUTHOR = "本书编写组"
+HEADER_AUTHOR = "上海交通大学业余无线电协会"
 
 ACCENT = "1F3A5F"
 ACCENT_RGB = RGBColor(0x1F, 0x3A, 0x5F)
@@ -382,6 +382,8 @@ def setup_header(doc, header_title=None, header_author=None):
     pf.first_line_indent = Cm(0)
     pf.space_after = Pt(2)
     pf.tab_stops.clear_all()
+    if p.style is not None and p.style.paragraph_format is not None:
+        p.style.paragraph_format.tab_stops.clear_all()
     pf.tab_stops.add_tab_stop(Cm(text_width_cm(doc)), WD_TAB_ALIGNMENT.RIGHT)
     run = p.add_run(header_title or HEADER_TITLE)
     run_fonts(run, BODY_CN, BODY_EN, 8, color=MID_GRAY)

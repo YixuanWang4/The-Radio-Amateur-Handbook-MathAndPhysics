@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import md2docx  # noqa: E402
 from pdf_outline import extract  # noqa: E402
 
-CHAPTER_RE = re.compile(r"^(0[1-9]|1[0-9]|2[0-5])-")
+CHAPTER_RE = re.compile(r"^(00-序言\.md|(0[1-9]|1[0-9]|2[0-5])-)")
 def _existing(paths):
     for item in paths:
         if not item:
@@ -46,16 +46,16 @@ BOOK_NAME = "业余无线电实用数学物理-书稿"
 TITLE = "业余无线电实用数学物理"
 SUBTITLE = "电台里的数学与物理"
 DESCRIPTION = "写给想弄明白天线、馈线、传播与设备原理的短波爱好者"
-EDITION = "本书编写组 · 2026 年 10 月 · 修订稿 v0.7"
+EDITION = "上海交通大学业余无线电协会 · 2026 年 10 月 · 修订稿 v0.7.1"
 HEADER = "业余无线电实用数学物理"
-AUTHOR = "本书编写组"
+AUTHOR = "上海交通大学业余无线电协会"
 
 
 def chapter_files(root: Path):
     return [
         p
         for p in sorted(root.glob("*.md"))
-        if CHAPTER_RE.match(p.name) and not p.name.startswith("00-")
+        if CHAPTER_RE.match(p.name)
     ]
 
 
